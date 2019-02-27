@@ -7,14 +7,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 2px solid grey;
+  border-bottom: 30px solid darkviolet;
+  border-top: 30px solid darkviolet;
   background-color: yellow;
 }
 
 .nav-header {
   font-family: 'Lobster', cursive;
   font-size: 2.6rem;
-  color: darkviolet;
+  color: crimson;
   padding: 0 20px;
 }
 
@@ -27,8 +28,9 @@
 }
 
 .nav-links a {
+  font-family: 'Patrick Hand', cursive;
   text-decoration: none;
-  color: crimson;
+  color: blue;
   font-size: 1.6rem;
   margin: 0 10px;
 }
@@ -38,7 +40,8 @@
 }
 
 .welcome-header {
-  font-size: 2.2rem;
+  font-family: 'Kalam', cursive;
+  font-size: 3.0rem;
   color: orange;
 }
 
@@ -52,8 +55,9 @@
 
 .friend-card {
   width: 30%;
+  font-family: 'Kalam', cursive;
   color: darkviolet;
-  border: 5px solid crimson;
+  border: 5px solid orange;
   border-radius: 5px;
   margin: 20px 0;
   background-color: lime;
