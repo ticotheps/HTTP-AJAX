@@ -8,7 +8,7 @@
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 2px solid grey;
-  background-color: yellow;
+  background-color: lime;
 }
 
 .nav-header {
@@ -27,7 +27,7 @@
 
 .nav-links a {
   text-decoration: none;
-  color: blue;
+  color: red;
   font-size: 1.6rem;
   margin: 0 10px;
 }
@@ -38,7 +38,7 @@
 
 .welcome-header {
   font-size: 2.2rem;
-  color: lime;
+  color: orange;
 }
 
 .friends-list-container {
@@ -51,8 +51,9 @@
 
 .friend-card {
   width: 30%;
-  border: 3px solid red;
+  color: darkviolet;
+  border: 2px solid red;
   border-radius: 5px;
   margin: 20px 0;
-  background-color: yellow;
+  background-color: lime;
 }
