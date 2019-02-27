@@ -9,12 +9,24 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			friends: []
+			friends: [],
+			error: "",
 		};
 	}
 
 	componentDidMount() {
 		console.log("CDM is running.");
+
+		axios
+			.get('http://localhost:5000/friends')
+			.then(res => {
+				console.log(res.data);
+				this.setState({ friends: res.data });
+			})
+			.catch(err => {
+				console.log(err);
+				this.setState({ error: err });
+			});
 	}
 
 	render() {
@@ -31,7 +43,7 @@ class App extends Component {
 				<div className="welcome-div">
 					<h2 className="welcome-header">Welcome to My Page!</h2>
 				</div>
-				<FriendsList />
+				<FriendsList friends={this.state.friends} />
 			</div>
 		);
 	}
