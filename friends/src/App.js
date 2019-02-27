@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import FriendsList from './components/FriendsList';
 import './App.css';
@@ -35,9 +34,9 @@ class App extends Component {
 				<nav className="nav-bar">
 					<h1 className="nav-header">Tico S. Thepsourinthone</h1>
 					<ul className="nav-links">
-						<a href="#">Home</a>
-						<a href="#">My Friends</a>
-						<a href="#">Add Friend</a>
+						<a href="https://lambdaschoool.com">Home</a>
+						<a href="https://lambdaschoool.com">My Friends</a>
+						<a href="https://lambdaschoool.com">Add Friend</a>
 					</ul>
 				</nav>
 				<div className="welcome-div">
