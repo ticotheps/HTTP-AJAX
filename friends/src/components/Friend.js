@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Friend = (props) => {
     return (
@@ -9,5 +10,14 @@ const Friend = (props) => {
         </div>
     );
 }
+
+Friend.propTypes = {
+    friend: PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        age: PropTypes.number,
+        email: PropTypes.string
+    })
+};
 
 export default Friend;
