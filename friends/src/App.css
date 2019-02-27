@@ -12,9 +12,10 @@
 }
 
 .nav-header {
-  font-size: 2.2rem;
+  font-family: 'Lobster', cursive;
+  font-size: 2.6rem;
   color: darkviolet;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 .nav-links {
@@ -27,7 +28,7 @@
 
 .nav-links a {
   text-decoration: none;
-  color: red;
+  color: crimson;
   font-size: 1.6rem;
   margin: 0 10px;
 }
@@ -52,7 +53,7 @@
 .friend-card {
   width: 30%;
   color: darkviolet;
-  border: 2px solid red;
+  border: 5px solid crimson;
   border-radius: 5px;
   margin: 20px 0;
   background-color: lime;
