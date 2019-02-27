@@ -2,8 +2,10 @@ import React from 'react';
 
 const Friend = (props) => {
     return (
-        <div>
-            <h2>I am one of Tico's Friends!</h2>
+        <div className="friend-card">
+            <h2>Name: {props.friend.name}</h2>
+            <h3>Age: {props.friend.age}</h3>
+            <h4>Email: {props.friend.email}</h4>
         </div>
     );
 }
