@@ -41,7 +41,7 @@ class App extends Component {
 					</ul>
 				</nav>
 				<div className="welcome-div">
-					<h2 className="welcome-header">Welcome to My Page!</h2>
+					<h2 className="welcome-header">Welcome to My #CodeFam!</h2>
 				</div>
 				<FriendsList friends={this.state.friends} />
 			</div>
