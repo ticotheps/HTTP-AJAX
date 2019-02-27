@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import FriendsList from './components/FriendsList';
 import './App.css';
 
@@ -29,16 +26,10 @@ class App extends Component {
 						<a href="#">Add Friend</a>
 					</ul>
 				</nav>
-				<div>
-					<h2>Welcome to My Page!</h2>
+				<div className="welcome-div">
+					<h2 className="welcome-header">Welcome to My Page!</h2>
 				</div>
-
-
-				<Route 
-					exact
-					path="/friends-list"
-					component={FriendsList}
-				/>
+				<FriendsList />
 			</div>
 		);
 	}
