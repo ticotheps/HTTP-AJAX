@@ -1,9 +1,13 @@
 .App {
   text-align: center;
   background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-bar {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -43,22 +47,92 @@
   font-family: 'Kalam', cursive;
   font-size: 3.0rem;
   color: orange;
+  margin-bottom: 10px;
 }
 
 .friends-list-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 100%;
+  width: 90%;
   flex-wrap: wrap;
 }
 
 .friend-card {
-  width: 30%;
+  width: 28%;
   font-family: 'Kalam', cursive;
   color: darkviolet;
   border: 5px solid orange;
   border-radius: 5px;
   margin: 20px 0;
   background-color: lime;
+}
+
+.new-friend-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.add-friend-header {
+  font-family: 'Kalam', cursive;
+  color: orange;
+  font-size: 2.5rem;
+  margin-top: 75px;
+  margin-bottom: 0;
+}
+
+.new-friend-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  background-color: lime;
+  padding: 20px 0;
+  border-bottom: 30px solid crimson;
+  border-top: 30px solid crimson;
+  border-radius: 5px;
+}
+
+label {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.6rem;
+  color: blue;
+  width: 24%;
+}
+
+input {
+  width: 75%;
+  height: 25px;
+  background-color: yellow;
+  color: darkviolet;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  padding-left: 10px;
+}
+
+.friend-name-input-area, .friend-age-input-area, .friend-email-input-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 10px 0 10px;
+}
+
+.save-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  margin: 20px auto 10px;
+  border-radius: 20px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.6rem;
+  color: blue;
+  background-color: orange;
+  border: 2px solid blue;
 }

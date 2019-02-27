@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import FriendsList from './components/FriendsList';
+import NewFriendForm from './components/NewFriendForm';
 import './App.css';
 
 
@@ -43,6 +44,7 @@ class App extends Component {
 					<h2 className="welcome-header">Welcome to My #CowabungaCodeFam!</h2>
 				</div>
 				<FriendsList friends={this.state.friends} />
+				<NewFriendForm />
 			</div>
 		);
 	}
