@@ -32,9 +32,7 @@ class NewFriendForm extends React.Component {
                 <h2 className="add-friend-header">Add a New Friend Below!</h2>
                 <form className="new-friend-form" onSubmit={this.handleSubmit}>
                     <div className="friend-name-input-area">
-                        <label for="friend-name">Name: </label>
                         <input 
-                            id="friend-name"
                             type="text" 
                             name="name"
                             onChange={this.changeHandler}
@@ -43,9 +41,8 @@ class NewFriendForm extends React.Component {
                         />
                     </div>
                     <div className="friend-age-input-area">
-                        <label for="friend-age">Age: </label>
+
                         <input 
-                            id="friend-age"
                             type="number" 
                             name="age"
                             onChange={this.changeHandler}
@@ -54,9 +51,7 @@ class NewFriendForm extends React.Component {
                         />
                     </div>
                     <div className="friend-email-input-area">
-                        <label for="friend-email">Email: </label>
                         <input 
-                            id="friend-email"
                             type="text" 
                             name="email"
                             onChange={this.changeHandler}

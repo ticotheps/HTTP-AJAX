@@ -4,7 +4,6 @@ import Home from './components/Home';
 import FriendsList from './components/FriendsList';
 import NewFriendForm from './components/NewFriendForm';
 import { 
-	BrowserRouter as Router,
 	Route,
 	NavLink
 } from "react-router-dom";
@@ -36,15 +35,20 @@ class App extends Component {
 			});
 	}
 
+	addFriend = (e, friend) => {
+		e.preventDefault();
+		console.log("The addFriend() function works!");
+	}
+
 	render() {
 		return (
 			<div className="App">
 				<nav className="nav-bar">
 					<h1 className="nav-header">Tico S. Thepsourinthone</h1>
 					<ul className="nav-links">
-						<NavLink exact to="/"><a href="#">Home</a></NavLink>
-						<NavLink to="/friends"><a href="#">My Friends</a></NavLink>
-						<NavLink to="/friends/add"><a href="#">Add Friend</a></NavLink>
+						<NavLink exact to="/">Home</NavLink>
+						<NavLink to="/friends">My Friends</NavLink>
+						<NavLink to="/friends/add">Add Friend</NavLink>
 					</ul>
             	</nav>
 				<Route 
