@@ -13,6 +13,7 @@ class NewFriendForm extends React.Component {
     changeHandler = e => {
         e.persist();
         let value = e.target.value;
+
         this.setState(prevState => ({
             friend: {
                 ...prevState.item,
@@ -21,11 +22,15 @@ class NewFriendForm extends React.Component {
         }));
     };
 
+    handleSubmit = e => {
+        this.props.addFriend(e, this.state.friend);
+    }
+
     render() {
         return (
             <div className="new-friend-form-container">
                 <h2 className="add-friend-header">Add a New Friend Below!</h2>
-                <form className="new-friend-form">
+                <form className="new-friend-form" onSubmit={this.handleSubmit}>
                     <div className="friend-name-input-area">
                         <label for="friend-name">Name: </label>
                         <input 
