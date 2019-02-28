@@ -10,6 +10,17 @@ class NewFriendForm extends React.Component {
         }
     }
 
+    changeHandler = e => {
+        e.persist();
+        let value = e.target.value;
+        this.setState(prevState => ({
+            friend: {
+                ...prevState.item,
+                [e.target.name]: value
+            }
+        }));
+    };
+
     render() {
         return (
             <div className="new-friend-form-container">
@@ -21,6 +32,7 @@ class NewFriendForm extends React.Component {
                             id="friend-name"
                             type="text" 
                             name="name"
+                            onChange={this.changeHandler}
                             placeholder="Name"
                             value={this.state.friend.name}
                         />
@@ -31,6 +43,7 @@ class NewFriendForm extends React.Component {
                             id="friend-age"
                             type="number" 
                             name="age"
+                            onChange={this.changeHandler}
                             placeholder="Age"
                             value={this.state.friend.age}
                         />
@@ -41,6 +54,7 @@ class NewFriendForm extends React.Component {
                             id="friend-email"
                             type="text" 
                             name="email"
+                            onChange={this.changeHandler}
                             placeholder="Email"
                             value={this.state.friend.email}
                         />
