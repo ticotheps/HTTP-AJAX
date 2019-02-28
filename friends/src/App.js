@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import FriendsList from './components/FriendsList';
 import NewFriendForm from './components/NewFriendForm';
+import { 
+	BrowserRouter as Router,
+	Route
+} from "react-router-dom";
+
 import './App.css';
 
 
@@ -43,7 +48,13 @@ class App extends Component {
 				<div className="welcome-div">
 					<h2 className="welcome-header">Welcome to My #CowabungaCodeFam!</h2>
 				</div>
-				<FriendsList friends={this.state.friends} />
+
+				<Route 
+					path="/" 
+					render={
+						props => <FriendsList {...props} friends={this.state.friends} />
+					} 
+				/> 
 				<NewFriendForm />
 			</div>
 		);
