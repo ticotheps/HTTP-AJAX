@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Home from './components/Home';
 import FriendsList from './components/FriendsList';
 import NewFriendForm from './components/NewFriendForm';
 import { 
 	BrowserRouter as Router,
-	Route
+	Route,
+	NavLink
 } from "react-router-dom";
 
 import './App.css';
@@ -40,22 +42,33 @@ class App extends Component {
 				<nav className="nav-bar">
 					<h1 className="nav-header">Tico S. Thepsourinthone</h1>
 					<ul className="nav-links">
-						<a href="https://lambdaschoool.com">Home</a>
-						<a href="https://lambdaschoool.com">My Friends</a>
-						<a href="https://lambdaschoool.com">Add Friend</a>
+						<NavLink exact to="/"><a href="#">Home</a></NavLink>
+						<NavLink to="/friends"><a href="#">My Friends</a></NavLink>
+						<NavLink to="/friends/add"><a href="#">Add Friend</a></NavLink>
 					</ul>
-				</nav>
-				<div className="welcome-div">
-					<h2 className="welcome-header">Welcome to My #CowabungaCodeFam!</h2>
-				</div>
+            	</nav>
+				<Route 
+					exact
+					path="/" 
+					render={
+						props => <Home {...props} />
+					} 
+				/> 
 
 				<Route 
-					path="/" 
+					exact
+					path="/friends" 
 					render={
 						props => <FriendsList {...props} friends={this.state.friends} />
 					} 
 				/> 
-				<NewFriendForm />
+
+				<Route 
+					path="/friends/add"
+					render={
+						props => <NewFriendForm />
+					}
+				/>
 			</div>
 		);
 	}
