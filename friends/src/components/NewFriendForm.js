@@ -15,13 +15,14 @@ class NewFriendForm extends React.Component {
 
         this.setState(prevState => ({
             friend: {
-                ...prevState.item,
+                ...prevState.friend,
                 [e.target.name]: value
             }
         }));
     };
 
     handleSubmit = e => {
+        e.preventDefault();
         this.props.addFriend(e, this.state.friend);
 
         this.setState({

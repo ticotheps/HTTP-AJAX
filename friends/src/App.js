@@ -81,7 +81,7 @@ class App extends Component {
 				<Route 
 					path="/friends/add"
 					render={
-						props => <NewFriendForm />
+						props => <NewFriendForm addFriend={this.addFriend}/>
 					}
 				/>
 			</div>
