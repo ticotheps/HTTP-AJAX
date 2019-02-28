@@ -5,8 +5,13 @@ const Friend = (props) => {
     return (
         <div className="friend-card">
             <h2>Name: {props.friend.name}</h2>
-            <h3>Age: {props.friend.age}</h3>
+            <h2>Age: {props.friend.age}</h2>
             <h4>Email: {props.friend.email}</h4>
+            <div className="friend-buttons-container">
+                <button className="friend-delete-button">Delete Friend</button>
+                <button className="friend-update-button">Update Details</button>
+            </div>
+
         </div>
     );
 }
