@@ -4,7 +4,6 @@ class NewFriendForm extends React.Component {
     state = {
         friend: {
             name: "",
-            id: "",
             age: "",
             email: ""
         }
@@ -24,6 +23,14 @@ class NewFriendForm extends React.Component {
 
     handleSubmit = e => {
         this.props.addFriend(e, this.state.friend);
+
+        this.setState({
+            friend: {
+                name: "",
+                age: "",
+                email: ""
+            }            
+        });
     }
 
     render() {
@@ -41,7 +48,6 @@ class NewFriendForm extends React.Component {
                         />
                     </div>
                     <div className="friend-age-input-area">
-
                         <input 
                             type="number" 
                             name="age"

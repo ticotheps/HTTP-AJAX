@@ -37,8 +37,19 @@ class App extends Component {
 
 	addFriend = (e, friend) => {
 		e.preventDefault();
-		console.log("The addFriend() function works!");
-	}
+		axios
+			.post("http://localhost:5000/friends", friend)
+			.then(res => {
+				console.log(res);
+				this.setState({
+					friends: res.data
+				});
+			})
+			.catch(err => {
+				console.log(err);
+			});
+	
+	};
 
 	render() {
 		return (
