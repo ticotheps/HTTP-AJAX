@@ -104,6 +104,10 @@
   border: 3px solid blue;
 }
 
+.friend-delete-button:hover, .friend-update-button:hover {
+  cursor: pointer;
+}
+
 .new-friend-form-container {
   display: flex;
   flex-direction: column;
