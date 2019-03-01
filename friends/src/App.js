@@ -3,10 +3,7 @@ import axios from 'axios';
 import Home from './components/Home';
 import FriendsList from './components/FriendsList';
 import NewFriendForm from './components/NewFriendForm';
-import { 
-	Route,
-	NavLink
-} from "react-router-dom";
+import { Route, NavLink} from "react-router-dom";
 
 import './App.css';
 
@@ -36,14 +33,15 @@ class App extends Component {
 	}
 
 	addFriend = (e, friend) => {
+		console.log("The addFriend() function is running.", friend);
 		e.preventDefault();
 		axios
 			.post("http://localhost:5000/friends", friend)
 			.then(res => {
-				console.log(res);
 				this.setState({
 					friends: res.data
 				});
+				this.props.history.push("/friends");
 			})
 			.catch(err => {
 				console.log(err);
@@ -52,11 +50,15 @@ class App extends Component {
 	};
 
 	deleteFriend = (e, friend) => {
+		console.log("The deleteFriend() function is running.", friend.id);
 		e.preventDefault();
 		axios
 			.delete(`http://localhost:5000/friends/${friend.id}`)
 			.then(res => {
-				console.log(res);
+				this.setState({
+					friends: res.data
+				});
+				this.props.history.push("/friends");
 			})
 			.catch(err => {
 				console.log(err);
