@@ -53,7 +53,15 @@ class App extends Component {
 
 	deleteFriend = (e, friend) => {
 		e.preventDefault();
-	}
+		axios
+			.delete(`http://localhost:5000/friends/${friend.id}`)
+			.then(res => {
+				console.log(res);
+			})
+			.catch(err => {
+				console.log(err);
+			});
+	};
 
 	render() {
 		return (
