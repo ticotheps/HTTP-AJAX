@@ -51,6 +51,10 @@ class App extends Component {
 	
 	};
 
+	deleteFriend = (e, friend) => {
+		e.preventDefault();
+	}
+
 	render() {
 		return (
 			<div className="App">
@@ -65,23 +69,28 @@ class App extends Component {
 				<Route 
 					exact
 					path="/" 
-					render={
-						props => <Home {...props} />
-					} 
+					render={props => <Home {...props} />} 
 				/> 
 
 				<Route 
 					exact
 					path="/friends" 
-					render={
-						props => <FriendsList {...props} friends={this.state.friends} />
+					render={props => (
+						<FriendsList 
+							{...props} 
+							friends={this.state.friends} 
+							deleteFriend={this.deleteFriend}
+						/>)
 					} 
 				/> 
 
 				<Route 
 					path="/friends/add"
-					render={
-						props => <NewFriendForm addFriend={this.addFriend}/>
+					render={props => (
+						<NewFriendForm 
+							{...props}
+							addFriend={this.addFriend}
+						/>)
 					}
 				/>
 			</div>
