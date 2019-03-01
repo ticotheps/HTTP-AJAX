@@ -50,7 +50,7 @@ class App extends Component {
 	};
 
 	deleteFriend = (e, friend) => {
-		console.log("The deleteFriend() function is running.", friend.id);
+		console.log("The deleteFriend() function is running.", friend);
 		e.preventDefault();
 		axios
 			.delete(`http://localhost:5000/friends/${friend.id}`)
