@@ -1,33 +1,179 @@
 .App {
   text-align: center;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1200px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.nav-bar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 20px solid darkviolet;
+  border-top: 20px solid darkviolet;
+  background-color: yellow;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-header {
+  font-family: 'Lobster', cursive;
+  font-size: 2.6rem;
+  color: crimson;
+  padding: 0 20px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  padding: 5px 0;
+}
+
+.nav-links a {
+  font-family: 'Patrick Hand', cursive;
+  text-decoration: none;
+  color: blue;
+  font-size: 1.8rem;
+  margin: 0 10px;
+}
+
+.welcome-div {
+  width: 100%;
+}
+
+.welcome-image {
+  width: 50%;
+  border: 5px solid darkviolet;
+  border-radius: 10px;
+}
+
+.welcome-header {
+  font-family: 'Kalam', cursive;
+  font-size: 3.5rem;
+  color: orange;
+  margin: 10px 0;
+}
+
+.friends-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.friend-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28%;
+  font-family: 'Kalam', cursive;
+  color: darkviolet;
+  border: 5px solid orange;
+  border-radius: 5px;
+  margin: 20px 0;
+  background-color: lime;
+}
+
+.friend-buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+}
+
+.friend-delete-button, .friend-update-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border-radius: 20px;
+  margin: 5px;
+  background-color: darkviolet;
+  color: white;
+  font-size: 1.4rem;
+  border: 3px solid blue;
+}
+
+.friend-delete-button:hover, .friend-update-button:hover {
+  cursor: pointer;
+}
+
+.new-friend-form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-friend-header {
+  font-family: 'Kalam', cursive;
+  color: orange;
+  font-size: 2.5rem;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-friend-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  background-color: lime;
+  padding: 20px 0;
+  border-bottom: 30px solid crimson;
+  border-top: 30px solid crimson;
+  border-radius: 5px;
+}
+
+label {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.6rem;
+  color: blue;
+  width: 24%;
+}
+
+input {
+  width: 100%;
+  height: 25px;
+  background-color: yellow;
+  color: darkviolet;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  padding-left: 10px;
+}
+
+.friend-name-input-area, .friend-age-input-area, .friend-email-input-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px 0 10px;
+}
+
+.save-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  margin: 20px auto 10px;
+  border-radius: 20px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.6rem;
+  color: blue;
+  background-color: orange;
+  border: 2px solid blue;
 }
